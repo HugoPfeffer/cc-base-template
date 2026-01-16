@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp", "--api-key", "CONTEXT7_API_KEY"]
+    },
+    "firecrawl-mcp": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_URL": "<IP_SERVCER>:<PORT>"
+      }
+    },
+    "kubernetes": {
+      "command": "npx",
+      "args": ["-y", "--read-only", "kubernetes-mcp-server@latest"]
+    }
+  }
+}

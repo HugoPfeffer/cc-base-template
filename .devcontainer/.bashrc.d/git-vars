@@ -1,0 +1,11 @@
+#==============================================================================
+# GitHub Tokens & Secrets (fetched via BWS)
+#==============================================================================
+export GDFKUBE_ORG_PAT=
+export GITHUB_TOKEN=
+export GITHUB_OCTACODE_MCP=
+
+export GIT_AUTHOR_NAME="Hugo Pfeffer"
+export GIT_AUTHOR_EMAIL="hugo.pguima@gmail.com"
+export GIT_COMMITTER_NAME="Hugo Pfeffer"
+export GIT_COMMITTER_EMAIL="hugo.pguima@gmail.com"
