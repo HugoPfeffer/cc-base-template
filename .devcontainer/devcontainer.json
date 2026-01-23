@@ -63,7 +63,7 @@
         "cursorStats.showProgressBars": true,
         "cursorStats.currency": "USD",
         "remote.SSH.remotePlatform": {},
-        "workbench.colorTheme": "2077",
+        "workbench.colorTheme": "XD Theme",
         "hexeditor.columnWidth": 16,
         "hexeditor.showDecodedText": true,
         "hexeditor.defaultEndianness": "little",
