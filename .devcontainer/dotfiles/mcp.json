@@ -2,13 +2,13 @@
   "mcpServers": {
     "context7": {
       "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp", "--api-key", "CONTEXT7_API_KEY"]
+      "args": ["-y", "@upstash/context7-mcp", "--api-key", "${CONTEXT7_API_KEY}"]
     },
     "firecrawl-mcp": {
       "command": "npx",
       "args": ["-y", "firecrawl-mcp"],
       "env": {
-        "FIRECRAWL_API_URL": "<IP_SERVCER>:<PORT>"
+        "FIRECRAWL_API_URL": "${FIRECRAWL_LOCAL_API_URL}"
       }
     },
     "kubernetes": {
