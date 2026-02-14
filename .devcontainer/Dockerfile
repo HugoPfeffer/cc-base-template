@@ -154,14 +154,14 @@ RUN bin_path=/home/node/.local/bin curl -sfL https://direnv.net/install.sh | bas
 # RUN direnv allow /workspace
   
 # Copy and set up firewall script
-COPY scripts/init-firewall.sh /usr/local/bin/
-USER root
-RUN chmod +x /usr/local/bin/init-firewall.sh && \
-  echo "node ALL=(root) NOPASSWD: /usr/local/bin/init-firewall.sh" > /etc/sudoers.d/node-firewall && \
-  chmod 0440 /etc/sudoers.d/node-firewall
+# COPY scripts/init-firewall.sh /usr/local/bin/
+# USER root
+# RUN chmod +x /usr/local/bin/init-firewall.sh && \
+#   echo "node ALL=(root) NOPASSWD: /usr/local/bin/init-firewall.sh" > /etc/sudoers.d/node-firewall && \
+#   chmod 0440 /etc/sudoers.d/node-firewall
 
 # Copy Claude Code plugin install script (to be run by user after container starts)
 COPY --chown=node:node scripts/cc-plugin-install.sh /usr/local/bin/cc-plugin-install
-RUN chmod +x /usr/local/bin/cc-plugin-install
+# RUN chmod +x /usr/local/bin/cc-plugin-install # MARKED FOR DELETION - CC needs to be authenticated to run this script
 
 USER node
