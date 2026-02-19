@@ -32,7 +32,8 @@
         "DavidAnson.vscode-markdownlint",
         "vscjava.vscode-java-pack",
         "ritwickdey.LiveServer",
-        "GitHub.vscode-github-actions"
+        "GitHub.vscode-github-actions",
+        "breaking-brake.cc-wf-studio"
       ],
       "settings": {
         "editor.formatOnSave": true,
@@ -53,7 +54,8 @@
         "window.commandCenter": 1,
         "workbench.editorAssociations": {
           "*.rule": "customFileEditor",
-          "*.mdc": "customFileEditor"
+          "*.mdc": "customFileEditor",
+          "*.md": "customFileEditor"
         },
         "cursor.composer.shouldChimeAfterChatFinishes": true,
         "cursor.composer.shouldAllowCustomModes": true,
