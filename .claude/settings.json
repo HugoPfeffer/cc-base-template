@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Read",
+      "WebFetch",
+      "Bash(npm run lint)",
+      "Bash(npm run test *)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs",
+      "mcp__firecrawl-mcp__firecrawl_scrape",
+      "mcp__firecrawl-mcp__firecrawl_search",
+      "mcp__firecrawl-mcp__firecrawl_crawl",
+      "mcp__firecrawl-mcp__firecrawl_check_crawl_status",
+      "mcp__firecrawl-mcp__firecrawl_map",
+      "mcp__firecrawl-mcp__firecrawl_extract",
+      "mcp__firecrawl-mcp__firecrawl_agent_status",
+      "mcp__firecrawl-mcp__firecrawl_browser_list",
+      "mcp__github__get_me",
+      "mcp__github__get_file_contents",
+      "mcp__github__list_branches",
+      "mcp__github__list_commits",
+      "mcp__github__get_commit",
+      "mcp__github__search_code",
+      "mcp__github__search_repositories",
+      "mcp__github__search_users",
+      "mcp__github__list_issues",
+      "mcp__github__search_issues",
+      "mcp__github__issue_read",
+      "mcp__github__list_issue_types",
+      "mcp__github__list_pull_requests",
+      "mcp__github__search_pull_requests",
+      "mcp__github__pull_request_read",
+      "mcp__github__get_label",
+      "mcp__github__list_releases",
+      "mcp__github__get_latest_release",
+      "mcp__github__get_release_by_tag",
+      "mcp__github__list_tags",
+      "mcp__github__get_tag",
+      "mcp__github__get_teams",
+      "mcp__github__get_team_members",
+      "mcp__kubernetes__configuration_view",
+      "mcp__kubernetes__namespaces_list",
+      "mcp__kubernetes__events_list",
+      "mcp__kubernetes__nodes_log",
+      "mcp__kubernetes__nodes_stats_summary",
+      "mcp__kubernetes__nodes_top",
+      "mcp__kubernetes__pods_list",
+      "mcp__kubernetes__pods_list_in_namespace",
+      "mcp__kubernetes__pods_get",
+      "mcp__kubernetes__pods_log",
+      "mcp__kubernetes__pods_top",
+      "mcp__kubernetes__resources_list",
+      "mcp__kubernetes__resources_get",
+      "mcp__kubernetes__helm_list"
+    ],
+    "ask": [
+      "Edit",
+      "Write",
+      "mcp__firecrawl-mcp__firecrawl_agent",
+      "mcp__firecrawl-mcp__firecrawl_browser_create",
+      "mcp__firecrawl-mcp__firecrawl_browser_delete",
+      "mcp__firecrawl-mcp__firecrawl_browser_execute",
+      "mcp__github__create_or_update_file",
+      "mcp__github__delete_file",
+      "mcp__github__push_files",
+      "mcp__github__create_repository",
+      "mcp__github__fork_repository",
+      "mcp__github__create_branch",
+      "mcp__github__issue_write",
+      "mcp__github__add_issue_comment",
+      "mcp__github__sub_issue_write",
+      "mcp__github__assign_copilot_to_issue",
+      "mcp__github__create_pull_request",
+      "mcp__github__update_pull_request",
+      "mcp__github__update_pull_request_branch",
+      "mcp__github__merge_pull_request",
+      "mcp__github__pull_request_review_write",
+      "mcp__github__add_comment_to_pending_review",
+      "mcp__github__request_copilot_review",
+      "mcp__kubernetes__pods_exec",
+      "mcp__kubernetes__pods_run",
+      "mcp__kubernetes__pods_delete",
+      "mcp__kubernetes__resources_create_or_update",
+      "mcp__kubernetes__resources_delete",
+      "mcp__kubernetes__resources_scale",
+      "mcp__kubernetes__helm_install",
+      "mcp__kubernetes__helm_uninstall"
+    ],
+    "deny": [
+      "Bash(curl *)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)"
+    ]
+  },
+  "env": {
+    "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}",
+    "FIRECRAWL_LOCAL_API_URL": "${FIRECRAWL_LOCAL_API_URL}"
+  },
+  "disabledMcpServers": [
+    "claude.ai Atlassian",
+    "claude.ai context7",
+    "claude.ai Kiwi.com",
+    "claude.ai Notion",
+    "claude.ai Trivago",
+    "claude.ai Vercel"
+  ],
+  "enabledMcpjsonServers": [
+    "context7",
+    "firecrawl-mcp",
+    "kubernetes",
+    "github"
+  ],
+  "plansDirectory": "/home/node/docs/plans",
+  "defaultMode": "default",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "extraKnownMarketplaces": {
+    "superpowers-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers-marketplace"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "ralph-loop@claude-plugins-official": false,
+    "pyright-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "jdtls-lsp@claude-plugins-official": true,
+    "elements-of-style@superpowers-marketplace": true,
+    "episodic-memory@superpowers-marketplace": true,
+    "double-shot-latte@superpowers-marketplace": false,
+    "superpowers@superpowers-marketplace": false
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "npx -y @owloops/claude-powerline@latest --style=powerline --theme=tokyo-night"
+  }
+}
