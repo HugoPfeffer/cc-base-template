@@ -14,12 +14,15 @@
       ]
     },
     "env": {
-      "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
-      "OTEL_METRICS_EXPORTER": "otlp"
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}",
+        "FIRECRAWL_LOCAL_API_URL": "${FIRECRAWL_LOCAL_API_URL}"
     },
-    "companyAnnouncements": [
-      "Welcome to Acme Corp! Review our code guidelines at docs.acme.com",
-      "Reminder: Code reviews required for all PRs",
-      "New security policy in effect"
+    "disabledMcpServers": [
+        "claude.ai Atlassian",
+        "claude.ai context7",
+        "claude.ai Kiwi.com",
+        "claude.ai Notion",
+        "claude.ai Trivago",
+        "claude.ai Vercel"
     ]
   }
