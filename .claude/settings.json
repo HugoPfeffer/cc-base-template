@@ -1,5 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}",
+    "FIRECRAWL_LOCAL_API_URL": "${FIRECRAWL_LOCAL_API_URL}"
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "permissions": {
     "allow": [
       "Read",
@@ -54,6 +62,12 @@
       "mcp__kubernetes__resources_get",
       "mcp__kubernetes__helm_list"
     ],
+    "deny": [
+      "Bash(curl *)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)"
+    ],
     "ask": [
       "Edit",
       "Write",
@@ -86,45 +100,17 @@
       "mcp__kubernetes__resources_scale",
       "mcp__kubernetes__helm_install",
       "mcp__kubernetes__helm_uninstall"
-    ],
-    "deny": [
-      "Bash(curl *)",
-      "Read(./.env)",
-      "Read(./.env.*)",
-      "Read(./secrets/**)"
     ]
   },
-  "env": {
-    "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}",
-    "FIRECRAWL_LOCAL_API_URL": "${FIRECRAWL_LOCAL_API_URL}"
-  },
-  "disabledMcpServers": [
-    "claude.ai Atlassian",
-    "claude.ai context7",
-    "claude.ai Kiwi.com",
-    "claude.ai Notion",
-    "claude.ai Trivago",
-    "claude.ai Vercel"
-  ],
   "enabledMcpjsonServers": [
     "context7",
     "firecrawl-mcp",
     "kubernetes",
     "github"
   ],
-  "plansDirectory": "/home/node/docs/plans",
-  "defaultMode": "default",
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  },
-  "extraKnownMarketplaces": {
-    "superpowers-marketplace": {
-      "source": {
-        "source": "github",
-        "repo": "obra/superpowers-marketplace"
-      }
-    }
+  "statusLine": {
+    "type": "command",
+    "command": "npx -y @owloops/claude-powerline@latest --style=powerline --theme=tokyo-night"
   },
   "enabledPlugins": {
     "ralph-loop@claude-plugins-official": false,
@@ -134,10 +120,25 @@
     "elements-of-style@superpowers-marketplace": true,
     "episodic-memory@superpowers-marketplace": true,
     "double-shot-latte@superpowers-marketplace": false,
-    "superpowers@superpowers-marketplace": false
+    "superpowers@superpowers-marketplace": false,
+    "commit-commands@claude-plugins-official": true
   },
-  "statusLine": {
-    "type": "command",
-    "command": "npx -y @owloops/claude-powerline@latest --style=powerline --theme=tokyo-night"
-  }
+  "extraKnownMarketplaces": {
+    "superpowers-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers-marketplace"
+      }
+    }
+  },
+  "plansDirectory": "/home/node/docs/plans",
+  "disabledMcpServers": [
+    "claude.ai Atlassian",
+    "claude.ai context7",
+    "claude.ai Kiwi.com",
+    "claude.ai Notion",
+    "claude.ai Trivago",
+    "claude.ai Vercel"
+  ],
+  "defaultMode": "default"
 }
