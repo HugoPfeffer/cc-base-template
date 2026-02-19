@@ -119,10 +119,10 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh && \
 
 
 # Install Claude
-RUN npm install -g @anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}
-
-# Copy template mcp.json into ~/.claude/mcp.json
-COPY --chown=node:node dotfiles/mcp.json /home/node/.claude/mcp.json
+#### OLD INSTALL METHOD ####
+# RUN npm install -g @anthropic-ai/claude-code@${CLAUDE_CODE_VERSION} 
+#### NEW INSTALL METHOD ####
+RUN curl -fsSL https://claude.ai/install.sh | bash 
 
 # Install OpenSpec
 RUN npm install -g @fission-ai/openspec@latest

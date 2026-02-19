@@ -11,4 +11,4 @@ alias bashrc-source='source ~/.bashrc'
 
 alias specify='uvx --from git+https://github.com/github/spec-kit.git specify'
 alias claude='claude --dangerously-skip-permissions'
-alias cc-custom='claude --dangerously-skip-permissions --mcp-config /home/node/.claude/mcp.json --system-prompt "$CLAUDE_SYSTEM_PROMPT"'
+alias cc-custom='claude --dangerously-skip-permissions --system-prompt "$CLAUDE_SYSTEM_PROMPT"'
