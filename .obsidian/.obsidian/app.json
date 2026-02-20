@@ -1,0 +1,13 @@
+{
+  "interfaceFontSize": 14,
+  "defaultViewMode": "source",
+  "showLineNumber": true,
+  "strictLineBreaks": true,
+  "useMarkdownLinks": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "inbox",
+  "attachmentFolderPath": "attachments",
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "shortest",
+  "showFrontmatter": true
+}

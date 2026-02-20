@@ -1,0 +1,5 @@
+{
+  "folder": "inbox",
+  "format": "YYYY-MM-DD",
+  "template": "templates/daily-note"
+}
