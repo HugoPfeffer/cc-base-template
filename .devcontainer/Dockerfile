@@ -127,6 +127,9 @@ RUN curl -fsSL https://claude.ai/install.sh | bash
 # Install OpenSpec
 RUN npm install -g @fission-ai/openspec@latest
 
+# Install OpenCode
+RUN npm install -g opencode-ai@latest
+
 # Install Spec-Kit
 RUN uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
 

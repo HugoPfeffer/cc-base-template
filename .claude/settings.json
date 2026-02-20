@@ -37,6 +37,7 @@
     "marksman-lsp@lsp-cc-servers": true,
     "kubernetes-lsp@lsp-cc-servers": true,
     "research-pipeline@lsp-cc-servers": true
+    "linear@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "superpowers-marketplace": {
@@ -52,7 +53,7 @@
       }
     }
   },
-  "plansDirectory": "/home/node/docs/plans",
+  "plansDirectory": "/workspace/.claude/docs/plans",
   "disabledMcpServers": [
     "claude.ai Atlassian",
     "claude.ai context7",

@@ -10,5 +10,5 @@ alias bashrc-open='cursor ~/.bashrc'
 alias bashrc-source='source ~/.bashrc'
 
 alias specify='uvx --from git+https://github.com/github/spec-kit.git specify'
-alias claude='claude --dangerously-skip-permissions'
-alias cc-custom='claude --dangerously-skip-permissions --system-prompt "$CLAUDE_SYSTEM_PROMPT"'
+alias claude='claude --allow-dangerously-skip-permissions'
+alias cc-custom='claude --allow-dangerously-skip-permissions --system-prompt "$CLAUDE_SYSTEM_PROMPT"'
