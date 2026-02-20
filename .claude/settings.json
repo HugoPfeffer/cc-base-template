@@ -38,9 +38,9 @@
     "episodic-memory@superpowers-marketplace": true,
     "double-shot-latte@superpowers-marketplace": false,
     "superpowers@superpowers-marketplace": false,
-    "commit-commands@claude-plugins-official": true
+    "commit-commands@claude-plugins-official": true,
+    "linear@claude-plugins-official": true
   },
-  "skipDangerousModePermissionPrompt": true,
   "extraKnownMarketplaces": {
     "superpowers-marketplace": {
       "source": {
