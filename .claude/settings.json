@@ -135,7 +135,7 @@
       }
     }
   },
-  "plansDirectory": "/home/node/docs/plans",
+  "plansDirectory": "/workspace/.claude/docs/plans",
   "disabledMcpServers": [
     "claude.ai Atlassian",
     "claude.ai context7",
