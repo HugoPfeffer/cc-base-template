@@ -6,12 +6,7 @@
     "pr": ""
   },
   "permissions": {
-    "deny": [
-      "Bash(curl *)",
-      "Read(./.env)",
-      "Read(./.env.*)",
-      "Read(./secrets/**)"
-    ]
+    "deny": ["Read(./.env)", "Read(./.env.*)", "Read(./secrets/**)"]
   },
   "enabledMcpjsonServers": [
     "context7",
@@ -39,6 +34,9 @@
     "double-shot-latte@superpowers-marketplace": false,
     "superpowers@superpowers-marketplace": false,
     "commit-commands@claude-plugins-official": true,
+    "marksman-lsp@lsp-cc-servers": true,
+    "kubernetes-lsp@lsp-cc-servers": true,
+    "research-pipeline@lsp-cc-servers": true
     "linear@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
@@ -46,6 +44,12 @@
       "source": {
         "source": "github",
         "repo": "obra/superpowers-marketplace"
+      }
+    },
+    "lsp-cc-servers": {
+      "source": {
+        "source": "github",
+        "repo": "HugoPfeffer/lsp-cc-servers"
       }
     }
   },
