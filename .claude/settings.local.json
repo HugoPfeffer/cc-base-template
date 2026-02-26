@@ -1,11 +1,4 @@
 {
-  "enableAllProjectMcpServers": true,
-  "enabledMcpjsonServers": [
-    "context7",
-    "firecrawl-mcp",
-    "kubernetes",
-    "github"
-  ],
   "permissions": {
     "allow": [
       "mcp__firecrawl-mcp__firecrawl_search",
@@ -22,7 +15,8 @@
       "mcp__firecrawl-mcp__firecrawl_browser_list",
       "Read:/workspace/**",
       "Glob:/workspace/**",
-      "Grep:/workspace/**"
+      "Grep:/workspace/**",
+      "WebSearch"
     ],
     "deny": [
       "Read:/workspace/.env",
@@ -36,5 +30,7 @@
       "Grep:/workspace/.cursor/**",
       "Grep:/workspace/.opencode/**"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": ["context7", "firecrawl-mcp", "github"]
 }
