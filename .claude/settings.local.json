@@ -1,9 +1,40 @@
 {
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "context7",
     "firecrawl-mcp",
     "kubernetes",
     "github"
   ],
-  "enableAllProjectMcpServers": true
+  "permissions": {
+    "allow": [
+      "mcp__firecrawl-mcp__firecrawl_search",
+      "mcp__firecrawl-mcp__firecrawl_scrape",
+      "mcp__firecrawl-mcp__firecrawl_map",
+      "mcp__firecrawl-mcp__firecrawl_crawl",
+      "mcp__firecrawl-mcp__firecrawl_check_crawl_status",
+      "mcp__firecrawl-mcp__firecrawl_extract",
+      "mcp__firecrawl-mcp__firecrawl_agent",
+      "mcp__firecrawl-mcp__firecrawl_agent_status",
+      "mcp__firecrawl-mcp__firecrawl_browser_create",
+      "mcp__firecrawl-mcp__firecrawl_browser_execute",
+      "mcp__firecrawl-mcp__firecrawl_browser_delete",
+      "mcp__firecrawl-mcp__firecrawl_browser_list",
+      "Read:/workspace/**",
+      "Glob:/workspace/**",
+      "Grep:/workspace/**"
+    ],
+    "deny": [
+      "Read:/workspace/.env",
+      "Read:/workspace/**/.env",
+      "Read:/workspace/.cursor/**",
+      "Read:/workspace/.opencode/**",
+      "Glob:/workspace/.cursor/**",
+      "Glob:/workspace/.opencode/**",
+      "Grep:/workspace/.env",
+      "Grep:/workspace/**/.env",
+      "Grep:/workspace/.cursor/**",
+      "Grep:/workspace/.opencode/**"
+    ]
+  }
 }
