@@ -1,0 +1,9 @@
+{
+  "enabledMcpjsonServers": [
+    "context7",
+    "firecrawl-mcp",
+    "kubernetes",
+    "github"
+  ],
+  "enableAllProjectMcpServers": true
+}
