@@ -61,6 +61,9 @@ RUN ARCH=$(dpkg --print-architecture) && \
 ARG STARSHIP_VERSION=1.21.1
 RUN curl -fsSL https://starship.rs/install.sh | sh -s -- -y -v v${STARSHIP_VERSION}
 
+# Install TruffleHog (secret scanner)
+RUN curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin
+
 # Set up non-root user
 USER node
 
