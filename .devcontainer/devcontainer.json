@@ -72,7 +72,7 @@
         "hexeditor.inspectorType": "aside",
         "geminicodeassist.project": "advance-dreamlet-170k4",
         "claude-code.extraArgs": ["--dangerously-skip-permissions"],
-        "claudeCode.selectedModel": "default",
+        "claudeCode.selectedModel": "opus",
         "claudeCode.environmentVariables": []
       }
     }
@@ -85,6 +85,8 @@
   "containerEnv": {
     "NODE_OPTIONS": "--max-old-space-size=4096",
     "CLAUDE_CONFIG_DIR": "/home/node/.claude",
+    "ENABLE_CLAUDEAI_MCP_SERVERS": "false",
+    "ANTHROPIC_MODEL": "opus",
     "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}",
     "CONTEXT7_API_KEY": "${localEnv:CONTEXT7_API_KEY}",
     "FIRECRAWL_LOCAL_API_URL": "${localEnv:FIRECRAWL_LOCAL_API_URL}",
@@ -92,8 +94,12 @@
     "GIT_AUTHOR_EMAIL": "${localEnv:GIT_AUTHOR_EMAIL}",
     "GIT_COMMITTER_NAME": "${localEnv:GIT_COMMITTER_NAME}",
     "GIT_COMMITTER_EMAIL": "${localEnv:GIT_COMMITTER_EMAIL}",
-    "EDITOR": "${localEnv:EDITOR}"
+    "EDITOR": "${localEnv:EDITOR}",
+    "VISUAL": "${localEnv:VISUAL}",
+    "PLANNOTATOR_REMOTE": "1",
+    "PLANNOTATOR_PORT": "9999"
   },
+  "forwardPorts": [9999],
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
   "workspaceFolder": "/workspace",
   // "postStartCommand": "sudo /usr/local/bin/init-firewall.sh",

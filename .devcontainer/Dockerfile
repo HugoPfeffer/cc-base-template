@@ -22,8 +22,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   dnsutils \
   aggregate \
   jq \
+  curl \
   nano \
   vim \
+  python3 \
+  python3-pip \
+  python3-venv \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Ensure default node user has access to /usr/local/share
@@ -62,6 +66,10 @@ USER node
 
 # Add /home/node/.local to PATH
 ENV PATH=$PATH:/home/node/.local/bin
+
+# Install pipx and pre-commit
+RUN pip install --user --break-system-packages pipx && \
+  pipx install pre-commit
 
 # Install global packages
 ENV NPM_CONFIG_PREFIX=/usr/local/share/npm-global
@@ -120,9 +128,12 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh && \
 
 # Install Claude
 #### OLD INSTALL METHOD ####
-# RUN npm install -g @anthropic-ai/claude-code@${CLAUDE_CODE_VERSION} 
+# RUN npm install -g @anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}
 #### NEW INSTALL METHOD ####
-RUN curl -fsSL https://claude.ai/install.sh | bash 
+RUN curl -fsSL https://claude.ai/install.sh | bash
+
+# Install Plannotator CLI
+RUN curl -fsSL https://plannotator.ai/install.sh | bash
 
 # Install OpenSpec
 RUN npm install -g @fission-ai/openspec@latest
@@ -162,9 +173,5 @@ RUN bin_path=/home/node/.local/bin curl -sfL https://direnv.net/install.sh | bas
 # RUN chmod +x /usr/local/bin/init-firewall.sh && \
 #   echo "node ALL=(root) NOPASSWD: /usr/local/bin/init-firewall.sh" > /etc/sudoers.d/node-firewall && \
 #   chmod 0440 /etc/sudoers.d/node-firewall
-
-# Copy Claude Code plugin install script (to be run by user after container starts)
-COPY --chown=node:node scripts/cc-plugin-install.sh /home/node/.local/bin/cc-plugin-install
-RUN chmod +x /home/node/.local/bin/cc-plugin-install
 
 USER node
