@@ -72,7 +72,7 @@
         "hexeditor.inspectorType": "aside",
         "geminicodeassist.project": "advance-dreamlet-170k4",
         "claude-code.extraArgs": ["--dangerously-skip-permissions"],
-        "claudeCode.selectedModel": "default",
+        "claudeCode.selectedModel": "opus",
         "claudeCode.environmentVariables": []
       }
     }
@@ -85,6 +85,8 @@
   "containerEnv": {
     "NODE_OPTIONS": "--max-old-space-size=4096",
     "CLAUDE_CONFIG_DIR": "/home/node/.claude",
+    "ENABLE_CLAUDEAI_MCP_SERVERS": "false",
+    "ANTHROPIC_MODEL": "opus",
     "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}",
     "CONTEXT7_API_KEY": "${localEnv:CONTEXT7_API_KEY}",
     "FIRECRAWL_LOCAL_API_URL": "${localEnv:FIRECRAWL_LOCAL_API_URL}",
