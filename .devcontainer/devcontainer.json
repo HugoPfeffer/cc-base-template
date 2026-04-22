@@ -95,8 +95,11 @@
     "GIT_COMMITTER_NAME": "${localEnv:GIT_COMMITTER_NAME}",
     "GIT_COMMITTER_EMAIL": "${localEnv:GIT_COMMITTER_EMAIL}",
     "EDITOR": "${localEnv:EDITOR}",
-    "VISUAL": "${localEnv:VISUAL}"
+    "VISUAL": "${localEnv:VISUAL}",
+    "PLANNOTATOR_REMOTE": "1",
+    "PLANNOTATOR_PORT": "9999"
   },
+  "forwardPorts": [9999],
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
   "workspaceFolder": "/workspace",
   // "postStartCommand": "sudo /usr/local/bin/init-firewall.sh",

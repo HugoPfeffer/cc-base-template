@@ -66,7 +66,8 @@
     "marksman-lsp@lsp-cc-servers": false,
     "kubernetes-lsp@lsp-cc-servers": false,
     "research-pipeline@lsp-cc-servers": false,
-    "linear@claude-plugins-official": false
+    "linear@claude-plugins-official": false,
+    "plannotator@plannotator": true
   },
   "extraKnownMarketplaces": {
     "superpowers-marketplace": {
@@ -79,6 +80,12 @@
       "source": {
         "source": "github",
         "repo": "HugoPfeffer/lsp-cc-servers"
+      }
+    },
+    "plannotator": {
+      "source": {
+        "source": "github",
+        "repo": "backnotprop/plannotator"
       }
     }
   },
