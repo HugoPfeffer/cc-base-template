@@ -164,8 +164,4 @@ RUN bin_path=/home/node/.local/bin curl -sfL https://direnv.net/install.sh | bas
 #   echo "node ALL=(root) NOPASSWD: /usr/local/bin/init-firewall.sh" > /etc/sudoers.d/node-firewall && \
 #   chmod 0440 /etc/sudoers.d/node-firewall
 
-# Copy Claude Code plugin install script (to be run by user after container starts)
-COPY --chown=node:node scripts/cc-plugin-install.sh /home/node/.local/bin/cc-plugin-install
-RUN chmod +x /home/node/.local/bin/cc-plugin-install
-
 USER node
