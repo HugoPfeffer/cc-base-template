@@ -25,10 +25,6 @@
       "url": "https://api.githubcopilot.com/mcp",
       "headers": {
         "Authorization": "Bearer ${GITHUB_TOKEN}"
-      },
-      "miro-mcp": {
-        "url": "https://mcp.miro.com/",
-        "autoApprove": []
       }
     }
   }
